@@ -1,0 +1,12 @@
+import { Graphics } from "pixi.js";
+
+export async function addPic1(app) {
+ const graphics = new Graphics();
+ const graphics1 = new Graphics();
+ graphics.fill(0xff0000).rect(500,500,200,200);
+ graphics1.fill(0x00ff00).circle(500,500,20,20);
+ graphics.fill(); //end of graphics..
+ graphics1.fill(); //end of graphics..
+ app.stage.addChild(graphics)
+ app.stage.addChild(graphics1)
+}
