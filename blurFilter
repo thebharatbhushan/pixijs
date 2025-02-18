@@ -1,0 +1,15 @@
+import { Sprite, Texture, BlurFilter } from "pixi.js";
+
+export async function addPic1(app) {
+  const texture1 = await Texture.from("pic1");
+  const sprite1 = new Sprite(texture1);
+  sprite1.x = 500;
+  sprite1.y = 500;
+
+  const filter1 = new BlurFilter(); //add blur filter
+  filter1.blur = 5; //amount 
+
+  sprite1.filters = [filter1]; //apply on sprite
+
+  app.stage.addChild(sprite1);
+}
