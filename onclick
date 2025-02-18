@@ -1,0 +1,23 @@
+import { setPositions, setProgramName, Sprite } from "pixi.js";
+
+export async function addPic1(app) {
+  const image = Sprite.from("pic1");
+  const sprite = new Sprite(image);
+
+  sprite.x = 200;
+  sprite.y = 200;
+
+  sprite.eventMode = "static";
+  sprite.cursor = "pointer";
+  sprite.on("pointerdown", () => {
+    console.log("yay!! i'm clicked!!");
+  });
+
+  // Alternatively, use the mouse & touch events:
+  // sprite.on('click', onClick); // mouse-only
+  // sprite.on('tap', onClick); // touch-only
+
+  app.stage.addChild(sprite);
+}
+
+// ©BharatBhushan
