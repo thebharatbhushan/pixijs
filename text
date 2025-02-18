@@ -1,0 +1,28 @@
+import { Graphics, Text, TextStyle } from "pixi.js";
+
+export async function addPic1(app) {
+  const style = new TextStyle({
+    fontFamily: "arial",
+    fontSize: 36,
+    fontStyle: "italic",
+    fontWeight: "bold",
+    fill: "#00ff00",
+    stroke: { color: "#fff", width: 5, join: "round" }, //bevel,mitter and round
+    wordWrap: true,
+    wordWrapWidth: 440,
+    dropShadow: {
+      color: "#ff0000",
+      blur: 2,
+      distance: 4,
+      angle: 2,
+      alpha: 0.8,
+    },
+  });
+
+  const text = new Text({ text: "Hello this is simple text", style });
+  text.x = 100;
+  text.y = 100;
+  text.skew.set(0.65, -0.3); //use for skew text.. if you remove this text is showing normally..
+
+  app.stage.addChild(text);
+}
